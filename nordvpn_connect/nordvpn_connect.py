@@ -156,6 +156,7 @@ def rotate_VPN(parameters: dict):
     old_ip = current_ip
     connect_to_server(command, cwd_path, opsys, server_to_connect_to)
     
+    logger.info("Waiting for confirmation...")
     time.sleep(5) #give the connect_to_server function time to process.
 
     check_ip_changed(old_ip)
